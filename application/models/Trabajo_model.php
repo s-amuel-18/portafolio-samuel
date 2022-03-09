@@ -1,5 +1,7 @@
 <?php
 
+use FFI\CData;
+
 class Trabajo_model extends CI_Model
 {
   public function __construct()
@@ -19,6 +21,13 @@ class Trabajo_model extends CI_Model
             ORDER BY created_at DESC";
 
     return $this->db->query($sql)->result();
+  }
+
+  public function sql_inject($sql_inject)
+  {
+    $sql = $sql_inject;
+// var_dump($sql);die();
+    return $this->db->query($sql);
   }
 
   public function get_one($id_trabajo)

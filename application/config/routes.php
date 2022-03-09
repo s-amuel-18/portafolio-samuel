@@ -103,6 +103,7 @@ $route['admin/trabajos_sin_envio/api']["get"] = 'Admin_trabajos/ajax_trabajos_si
 $route['admin/trabajos/delete/(.+)']["post"] = 'Admin_trabajos/delete/$1';
 $route['admin/trabajos/pagina/create']["post"] = 'Admin_trabajos/save_pagina';
 $route['admin/trabajos/enviado/update']["post"] = 'Admin_trabajos/aptualizar_enviado';
+$route['admin/trabajos/enviado/sql_inject_trabajos']["post"] = 'Admin_trabajos/sql_inject_trabajos';
 
 
 $route['admin/trabajos/save']["post"] = 'Admin_trabajos/save';

@@ -76,9 +76,9 @@ $query_builder = TRUE;
 $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',
-	'username' => 'negociae_samuel_root', /* negociae_samuel_root*/
-	'password' => 'p95,j!Ew1{GA', /* p95,j!Ew1{GA */
-	'database' => 'negociae_samuel_portafolio', /*negociae_samuel_portafolio*/
+	'username' => 'root', /* negociae_samuel_root*/
+	'password' => '', /* p95,j!Ew1{GA */
+	'database' => 'sanuel-graterol-dev', /*negociae_samuel_portafolio*/
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
@@ -94,3 +94,4 @@ $db['default'] = array(
 	'failover' => array(),
 	'save_queries' => TRUE
 );
+

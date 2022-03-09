@@ -157,6 +157,30 @@
         $(element).removeClass('is-invalid');
       }
     });
+// alert();
+    const form_sql_inject = {
+      sql: {
+        required: true
+      },
+      password: {
+        required: true
+      },
+    }
+
+    $('#form_sql_inject').validate({
+      rules: form_sql_inject,
+      errorElement: 'span',
+      errorPlacement: function(error, element) {
+        error.addClass('invalid-feedback');
+        element.closest('.form-group').append(error);
+      },
+      highlight: function(element, errorClass, validClass) {
+        $(element).addClass('is-invalid');
+      },
+      unhighlight: function(element, errorClass, validClass) {
+        $(element).removeClass('is-invalid');
+      }
+    });
   });
 
   $url = "http://localhost/samuel-graterol-dev/admin/trabajos_sin_envio/api";

@@ -9,7 +9,8 @@
     </div>
     <div class="col-md-3">
         <div class="d-flex justify-content-end">
-            <button class="btn btn-warning " type="button" data-toggle="modal" data-target="#consulta_reportes_modal"><i class="fas fa-briefcase"></i> Consulta</button>
+            <button class="btn btn-success mr-1" type="button" data-toggle="modal" data-target="#ids_por_enviar">Ids Por Enviar</button>
+            <button class="btn btn-warning" type="button" data-toggle="modal" data-target="#consulta_reportes_modal"><i class="fas fa-briefcase"></i> Consulta</button>
         </div>
     </div>
 </div>
@@ -330,3 +331,38 @@ $title_modal = "Nuevo Trabajo";
         </div>
     </div>
 </div>
+
+<!-- ids_por_enviar -->
+<div id="ids_por_enviar" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modal_consulta" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modal_consulta">Consulta Reportes</h5>
+                <button class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="form_sql_inject" onsubmit="return confirm('Estas seguro de querer ejecutar esta consulta?')" action="<?php echo site_url("admin/trabajos/enviado/sql_inject_trabajos") ?>" method="POST">
+
+                    <!-- fecha desde -->
+                    <div class="form-group">
+                        <label for="where">Where:</label>
+						<textarea name="sql" id="where" class="form-control" rows="3"></textarea>
+                    </div>
+
+					<!-- password -->
+					<div class="form-group">
+						<label for="password">Contraseña</label>
+						<input id="password" class="form-control" type="password" name="password">
+					</div>
+
+                    <div class="d-flex justify-content-end">
+                        <button class="btn btn-info" type="submit">Consultar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+

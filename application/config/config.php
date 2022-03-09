@@ -23,7 +23,7 @@ ob_start();
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'https://negociaecuador.com/samuel-graterol-dev/';
+$config['base_url'] = ''; /* https://negociaecuador.com/samuel-graterol-dev/ */
 
 /*
 |--------------------------------------------------------------------------
